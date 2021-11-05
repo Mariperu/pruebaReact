@@ -1,9 +1,11 @@
 import React from 'react'
 
-export function Location() {
+const LocationM = () => {
     return (
         <div>
-            
+            <p>Mel</p>
         </div>
     )
 }
+
+export {LocationM};

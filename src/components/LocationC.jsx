@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Character = () => {
+const LocationC = () => {
     return (
         <div>
-            <p>Dafne</p>
+            <p>Cathy</p>
         </div>
     )
 }
 
-export default Character;
+export {LocationC};

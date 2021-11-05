@@ -1,9 +1,11 @@
 import React from 'react'
 
-export function Episode() {
+const EpisodesMa = () => {
     return (
         <div>
-            <p>Roxana</p>
+            Maritza
         </div>
     )
 }
+
+export {EpisodesMa};

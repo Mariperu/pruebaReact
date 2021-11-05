@@ -1,11 +1,11 @@
 import React from 'react'
 
-const CharacterR = () => {
+const EpisodesG = () => {
     return (
         <div>
-            <p>Roxana</p>
+            <p>Grecia</p>
         </div>
     )
 }
 
-export {CharacterR};
+export {EpisodesG};
