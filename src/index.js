@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import App from "./router/App.jsx";
+import App from "./Router/App.js";
 
 ReactDOM.render(
   <React.StrictMode>
