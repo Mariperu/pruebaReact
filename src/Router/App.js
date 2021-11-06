@@ -1,4 +1,5 @@
 // import { cleanup } from "@testing-library/react";
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { CharacterD } from '../components/CharacterD.jsx';
@@ -13,10 +14,10 @@ import { LocationM } from '../components/LocationM.jsx';
 //import "./App.css";
 
 function App() {
-
   return (
   
   <Router>
+
       <div className="App">
 
         <nav>
@@ -40,7 +41,7 @@ function App() {
         </Routes>
       </div>
   </Router>
-  
+
   );
 }
 
