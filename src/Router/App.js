@@ -1,3 +1,5 @@
+// import { cleanup } from "@testing-library/react";
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { CharacterD } from '../components/CharacterD.jsx';
@@ -14,7 +16,8 @@ import { LocationM } from '../components/LocationM.jsx';
 function App() {
   return (
   
-<Router>
+  <Router>
+
       <div className="App">
 
         <nav>
