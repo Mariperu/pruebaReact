@@ -1,12 +1,18 @@
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { CharacterD } from '../components/CharacterD.jsx';
-import { CharacterR } from '../components/CharacterR.jsx';
-import { EpisodesG } from '../components/EpisodesG.jsx';
-import { EpisodesMa } from '../components/EpisodesMa.jsx';
-import { LocationC } from '../components/LocationC.jsx';
-import { LocationM } from '../components/LocationM.jsx';
+import { CharacterD } from "../components/CharacterD.jsx";
+import { CharacterR } from "../components/CharacterR.jsx";
+import { EpisodesG } from "../components/EpisodesG.jsx";
+import { EpisodesMa } from "../components/EpisodesMa.jsx";
+import { LocationC } from "../components/LocationC.jsx";
+import { LocationM } from "../components/LocationM.jsx";
+
+import { CharacterDF } from "../componentsFirebase/CharacterDF.jsx";
+import { CharacterRF } from "../componentsFirebase/CharacterRF.jsx";
+import { EpisodesGF } from "../componentsFirebase/EpisodesGF.jsx";
+import { EpisodesMaF } from "../componentsFirebase/EpisodesMaF.jsx";
+import { LocationCF } from "../componentsFirebase/LocationCF.jsx";
+import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
 
 //import { Button } from "react-bootstrap";
 //import Button from "react-bootstrap/Button";
@@ -14,11 +20,8 @@ import { LocationM } from '../components/LocationM.jsx';
 
 function App() {
   return (
-
-<Router>
-
+    <Router>
       <div className="App">
-
         <nav>
           <ul>
             <li>
@@ -30,17 +33,77 @@ function App() {
             <li>
               <Link to="/location">Location</Link>
             </li>
+
+            <li>
+              <Link to="/charactersF">CharactersF</Link>
+            </li>
+            <li>
+              <Link to="/episodesF">EpisodesF</Link>
+            </li>
+            <li>
+              <Link to="/locationF">LocationF</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
-        <Route path="/characters" element={<> <CharacterD /> < CharacterR /> </>} />
-        <Route path="/episodes" element={<> < EpisodesG /> < EpisodesMa /> </>} />
-        <Route path="/location" element={<> < LocationC /> < LocationM /> </>} />
-          
+          <Route
+            path="/characters"
+            element={
+              <>
+                {" "}
+                <CharacterD /> <CharacterR />{" "}
+              </>
+            }
+          />
+          <Route
+            path="/episodes"
+            element={
+              <>
+                {" "}
+                <EpisodesG /> <EpisodesMa />{" "}
+              </>
+            }
+          />
+          <Route
+            path="/location"
+            element={
+              <>
+                {" "}
+                <LocationC /> <LocationM />{" "}
+              </>
+            }
+          />
+
+          <Route
+            path="/charactersF"
+            element={
+              <>
+                {" "}
+                <CharacterDF /> <CharacterRF />{" "}
+              </>
+            }
+          />
+          <Route
+            path="/episodesF"
+            element={
+              <>
+                {" "}
+                <EpisodesGF /> <EpisodesMaF />{" "}
+              </>
+            }
+          />
+          <Route
+            path="/locationF"
+            element={
+              <>
+                {" "}
+                <LocationCF /> <LocationMF />{" "}
+              </>
+            }
+          />
         </Routes>
       </div>
-  </Router>
-
+    </Router>
   );
 }
 
