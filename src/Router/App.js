@@ -16,7 +16,6 @@ function App() {
   
 <Router>
       <div className="App">
-
         <nav>
           <ul>
             <li>
@@ -34,8 +33,10 @@ function App() {
         <Route path="/characters" element={<> <CharacterD /> < CharacterR /> </>} />
         <Route path="/episodes" element={<> < EpisodesG /> < EpisodesMa /> </>} />
         <Route path="/location" element={<> < LocationC /> < LocationM /> </>} />
+        
           
         </Routes>
+        
       </div>
   </Router>
 
