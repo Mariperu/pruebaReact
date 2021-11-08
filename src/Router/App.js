@@ -14,6 +14,8 @@ import { EpisodesGF } from "../componentsFirebase/EpisodesGF.jsx";
 import { EpisodesMaF } from "../componentsFirebase/EpisodesMaF.jsx";
 import { LocationCF } from "../componentsFirebase/LocationCF.jsx";
 import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
+import {FooterR} from '../components/FooterR.jsx'
+
 
 
 //import { Button } from "react-bootstrap";
@@ -23,91 +25,73 @@ import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
 function App() {
   return (
 
-<Router>
+    <><Router>
+
 
       <div className="App">
         <nav>
-          <ul>
-            <li>
-              <Link to="/characters">Characters</Link>
+          <ul className='nav nav-pills justify-content-end'>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/characters">Characters</Link>
             </li>
-            <li>
-              <Link to="/episodes">Episodes</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/episodes">Episodes</Link>
             </li>
-            <li>
-              <Link to="/location">Location</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/location">Location</Link>
             </li>
-
-            <li>
-              <Link to="/charactersF">CharactersF</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/charactersF">CharactersF</Link>
             </li>
-            <li>
-              <Link to="/episodesF">EpisodesF</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/episodesF">EpisodesF</Link>
             </li>
-            <li>
-              <Link to="/locationF">LocationF</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/locationF">LocationF</Link>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route
             path="/characters"
-            element={
-              <>
-                {" "}
-                <CharacterD /> <CharacterR />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <CharacterD /> <CharacterR />{" "}
+            </>} />
           <Route
             path="/episodes"
-            element={
-              <>
-                {" "}
-                <EpisodesG /> <EpisodesMa />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <EpisodesG /> <EpisodesMa />{" "}
+            </>} />
           <Route
             path="/location"
-            element={
-              <>
-                {" "}
-                <LocationC /> <LocationM />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <LocationC /> <LocationM />{" "}
+            </>} />
 
           <Route
             path="/charactersF"
-            element={
-              <>
-                {" "}
-                <CharacterDF /> <CharacterRF />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <CharacterDF /> <CharacterRF />{" "}
+            </>} />
           <Route
             path="/episodesF"
-            element={
-              <>
-                {" "}
-                <EpisodesGF /> <EpisodesMaF />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <EpisodesGF /> <EpisodesMaF />{" "}
+            </>} />
           <Route
             path="/locationF"
-            element={
-              <>
-                {" "}
-                <LocationCF /> <LocationMF />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <LocationCF /> <LocationMF />{" "}
+            </>} />
         </Routes>
       </div>
-    </Router>
+    </Router><FooterR /></>
   );
 }
 
