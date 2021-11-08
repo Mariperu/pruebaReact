@@ -15,9 +15,9 @@ import { EpisodesMaF } from "../componentsFirebase/EpisodesMaF.jsx";
 import { LocationCF } from "../componentsFirebase/LocationCF.jsx";
 import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
 
-import {LoginD} from "../componentsFirebase/LoginD.jsx";
+import { LoginD } from "../componentsFirebase/LoginD.jsx";
 
-import {FooterR} from '../components/FooterR.jsx'
+import { FooterR } from '../components/FooterR.jsx'
 
 
 //import { Button } from "react-bootstrap";
@@ -26,13 +26,13 @@ import {FooterR} from '../components/FooterR.jsx'
 
 function App() {
   // const [globalUser, setGlobalUser] = useState(null);
-    
+
   // onAuthStateChanged(auth, (firebaseUser)=>{
   //   if(firebaseUser){
-      //codigo en caso de que haya sesion iniciada
-    //   setGlobalUser(firebaseUser)
-    // } else{
-      //codigo en caso no ay sesion inicicada
+  //codigo en caso de que haya sesion iniciada
+  //   setGlobalUser(firebaseUser)
+  // } else{
+  //codigo en caso no ay sesion inicicada
   //     setGlobalUser(null);
   //   }
   // })
@@ -40,30 +40,43 @@ function App() {
   return (
 
     <><Router>
-
-
       <div className="App">
-        <nav>
-          <ul className='nav nav-pills justify-content-end'>
-            <li className='nav-item'>
-              <Link className='nav-link' to="/characters">Characters</Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to="/episodes">Episodes</Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to="/location">Location</Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to="/charactersF">CharactersF</Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to="/episodesF">EpisodesF</Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to="/locationF">LocationF</Link>
-            </li>
-          </ul>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div className="container-fluid">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className='nav-item'>
+                  <Link className='nav-link' to="/characters">Characters</Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to="/episodes">Episodes</Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to="/location">Location</Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to="/charactersF">CharactersF</Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to="/episodesF">EpisodesF</Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to="/locationF">LocationF</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
         <Routes>
           <Route
@@ -93,7 +106,7 @@ function App() {
               <>
                 {" "}
                 <LoginD />{" "}
-                
+
               </>
             }
           />
