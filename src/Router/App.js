@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import { CharacterD } from "../components/CharacterD.jsx";
 import { CharacterR } from "../components/CharacterR.jsx";
 import { EpisodesG } from "../components/EpisodesG.jsx";
@@ -13,10 +14,11 @@ import { EpisodesGF } from "../componentsFirebase/EpisodesGF.jsx";
 import { EpisodesMaF } from "../componentsFirebase/EpisodesMaF.jsx";
 import { LocationCF } from "../componentsFirebase/LocationCF.jsx";
 import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
+
 import {LoginD} from "../componentsFirebase/LoginD.jsx";
 
-// import {onAuthStateChanged} from 'firebase/auth';
-// import {auth} from '../firebase/firebaseConfig'
+import {FooterR} from '../components/FooterR.jsx'
+
 
 //import { Button } from "react-bootstrap";
 //import Button from "react-bootstrap/Button";
@@ -36,50 +38,46 @@ function App() {
   // })
 
   return (
-    <Router>
+
+    <><Router>
+
+
       <div className="App">
         <nav>
-          <ul>
-            <li>
-              <Link to="/characters">Characters</Link>
+          <ul className='nav nav-pills justify-content-end'>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/characters">Characters</Link>
             </li>
-            <li>
-              <Link to="/episodes">Episodes</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/episodes">Episodes</Link>
             </li>
-            <li>
-              <Link to="/location">Location</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/location">Location</Link>
             </li>
-
-            <li>
-              <Link to="/charactersF">CharactersF</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/charactersF">CharactersF</Link>
             </li>
-            <li>
-              <Link to="/episodesF">EpisodesF</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/episodesF">EpisodesF</Link>
             </li>
-            <li>
-              <Link to="/locationF">LocationF</Link>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/locationF">LocationF</Link>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route
             path="/characters"
-            element={
-              <>
-                {" "}
-                <CharacterD /> <CharacterR />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <CharacterD /> <CharacterR />{" "}
+            </>} />
           <Route
             path="/episodes"
-            element={
-              <>
-                {" "}
-                <EpisodesG /> <EpisodesMa />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <EpisodesG /> <EpisodesMa />{" "}
+            </>} />
           <Route
             path="/location"
             element={
@@ -108,27 +106,22 @@ function App() {
               </>
             }
           />
+
           <Route
             path="/episodesF"
-            element={
-              <>
-                {" "}
-                <EpisodesGF /> <EpisodesMaF />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <EpisodesGF /> <EpisodesMaF />{" "}
+            </>} />
           <Route
             path="/locationF"
-            element={
-              <>
-                {" "}
-                <LocationCF /> <LocationMF />{" "}
-              </>
-            }
-          />
+            element={<>
+              {" "}
+              <LocationCF /> <LocationMF />{" "}
+            </>} />
         </Routes>
       </div>
-    </Router>
+    </Router><FooterR /></>
   );
 }
 
