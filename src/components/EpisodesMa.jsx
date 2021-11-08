@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { EpisodesMaModal } from "./EpisodesMaModal.jsx";
 //import { EpisodesMaEp } from "./EpisodesMaEp.jsx";
 import { EpisodesMaSort } from "./EpisodesMaSort.jsx";
 
 const EpisodesMa = () => {
   //HOOK, Para guardar y usar api como estado
   const [epis, setEpis] = useState([]); // array;
-
-  //estado para sort
-  //const [sortEp, setSortEp] = useState();
 
   //const urlAPI = "https://rickandmortyapi.com/api/character";
   const urlAPI = "https://rickandmortyapi.com/api/episode";
@@ -24,7 +22,7 @@ const EpisodesMa = () => {
   return (
     <>
       <p>Maritza</p>
-
+      <EpisodesMaModal />
       {/* <EpisodesMaEp episodes={epis} /> */}
       <EpisodesMaSort episodes={epis} />
     </>
