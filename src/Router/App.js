@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import { CharacterD } from "../components/CharacterD.jsx";
 import { CharacterR } from "../components/CharacterR.jsx";
 import { EpisodesG } from "../components/EpisodesG.jsx";
@@ -16,13 +17,17 @@ import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
 import {FooterR} from '../components/FooterR.jsx'
 
 
+
 //import { Button } from "react-bootstrap";
 //import Button from "react-bootstrap/Button";
 //import "./App.css";
 
 function App() {
   return (
+
     <><Router>
+
+
       <div className="App">
         <nav>
           <ul className='nav nav-pills justify-content-end'>
