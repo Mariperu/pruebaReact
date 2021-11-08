@@ -2,7 +2,7 @@ import React from "react";
 
 const EpisodesG = () => {
   return (
-      <nav classNameName="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#/">
             Navbar
