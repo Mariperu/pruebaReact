@@ -14,8 +14,10 @@ import { EpisodesGF } from "../componentsFirebase/EpisodesGF.jsx";
 import { EpisodesMaF } from "../componentsFirebase/EpisodesMaF.jsx";
 import { LocationCF } from "../componentsFirebase/LocationCF.jsx";
 import { LocationMF } from "../componentsFirebase/LocationMF.jsx";
-import {FooterR} from '../components/FooterR.jsx'
 
+import {LoginD} from "../componentsFirebase/LoginD.jsx";
+
+import {FooterR} from '../components/FooterR.jsx'
 
 
 //import { Button } from "react-bootstrap";
@@ -23,6 +25,18 @@ import {FooterR} from '../components/FooterR.jsx'
 //import "./App.css";
 
 function App() {
+  // const [globalUser, setGlobalUser] = useState(null);
+    
+  // onAuthStateChanged(auth, (firebaseUser)=>{
+  //   if(firebaseUser){
+      //codigo en caso de que haya sesion iniciada
+    //   setGlobalUser(firebaseUser)
+    // } else{
+      //codigo en caso no ay sesion inicicada
+  //     setGlobalUser(null);
+  //   }
+  // })
+
   return (
 
     <><Router>
@@ -66,17 +80,33 @@ function App() {
             </>} />
           <Route
             path="/location"
-            element={<>
-              {" "}
-              <LocationC /> <LocationM />{" "}
-            </>} />
-
+            element={
+              <>
+                {" "}
+                <LocationC /> <LocationM />{" "}
+              </>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <>
+                {" "}
+                <LoginD />{" "}
+                
+              </>
+            }
+          />
           <Route
             path="/charactersF"
-            element={<>
-              {" "}
-              <CharacterDF /> <CharacterRF />{" "}
-            </>} />
+            element={
+              <>
+                {" "}
+                <CharacterDF />  <CharacterRF />{" "}
+              </>
+            }
+          />
+
           <Route
             path="/episodesF"
             element={<>
